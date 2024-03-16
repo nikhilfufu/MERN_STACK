@@ -1,1 +1,32 @@
-<input type="text" id="text">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="main" style="background-color:violet;">
+    <button class="button" id="button" >Click to make white</button>
+
+<script>
+    const buttons = document.getElementById("button");
+   
+    document.addEventListener("click",function colorChange(){
+        if(buttons.innerText=="Click to make white"){
+            document.body.style.backgroundColor="white";
+            buttons.innerText="click to make violet"
+        }
+        else{
+            document.body.style.backgroundColor="violet";
+            buttons.innerText="Click to make white";
+        }
+        
+    })
+
+    
+    
+</script>
+</body>
+
+
+</html>
