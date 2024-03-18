@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme</title>
+</head>
+<body class="bg">
+    <select id="selectTheme">
+        <option value="0" selected></option>
+        <option value="1">Black</option>
+        <option value="2">White</option>
+        <option value="3">Red</option>
+        <option value="4">Orange</option>
+    </select>
+    <br>
+    <a href="themeCheck.html">click here</a>
+    <script>
+        const theme = document.getElementById("selectTheme")
+        const whatColor  = localStorage.getItem("color");
+    if (whatColor) {
+        // Set the selected theme in the dropdown
+        theme.value = whatColor;
+
+        // Change the body background color based on the selected theme
+        document.body.style.backgroundColor = whatColor;
+    }
+        function ThemeChange(){
+            var themeSelected = theme.options[theme.selectedIndex].innerText
+            console.log(themeSelected)
+            
+            if(themeSelected=="Black"){
+                document.body.style.backgroundColor="Black"
+            }
+            else if(themeSelected=="White"){
+                document.body.style.backgroundColor="White"
+            }
+            else if(themeSelected=="Red"){
+                document.body.style.backgroundColor="Red"
+            }
+            else if(themeSelected=="Orange"){
+                document.body.style.backgroundColor="orange"
+            }
+            localStorage.setItem("color",themeSelected)
+        }
+        
+        theme.addEventListener("change",ThemeChange)
+        
+    </script>
+</body>
+</html>

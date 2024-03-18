@@ -9,6 +9,16 @@
     <script>
         var sN=localStorage.getItem("username");
         document.getElementById("wel").innerText=`welcome ${sN}`;
+        console.log(sN)
+       
+       function nik(Nickname){
+        this.name = Nickname
+       }
+       nik.prototype.PrintingName = function(){
+        console.log("this is my user name "+this.name)
+       }
+       let Nikhil = new nik(sN)
+       Nikhil.PrintingName()
     </script>
 </body>
 </html>
