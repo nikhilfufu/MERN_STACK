@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To count Char</title>
+    <style>
+        #char {
+            width: 100%;
+            height: auto;
+            border: none;
+            background-color: #f0f0f0; /* Set background color */
+            padding: 10px; /* Adjust padding */
+            font-size: 16px; /* Adjust font size */
+            line-height: 1.5; /* Adjust line height */
+        }
+    </style>
+</head>
+<body>
+    <label>Enter the para</label>
+    <br>
+    <br>
+    <input type="text" id="char">
+    <br>
+    <br>
+    <button  id="ch" onclick="noChar()">number of char</button>
+    <button id="st" onclick="lengthString()">length of string</button>
+    <button id="cap" onclick="makeCap()">to make cap</button>
+    <button id="sma" onclick="makeSmall()"> to make small</button>
+    <br>
+    <br>
+    <p1 id="out"></p1>
+    <script>
+        function noChar(){
+            const input = document.getElementById("char")
+            let s = input.value
+            for(let i = 0;i<s.length;i++){
+                var s1 = s.split("")
+            }
+            console.log(s1.length)
+            document.getElementById("out").innerHTML=`the number of char is ${s1.length}`
+        }
+        function lengthString(){
+            const input = document.getElementById("char")
+            let s = input.value
+            
+            console.log(s.length)
+            document.getElementById("out").innerHTML=`the length of the string is ${s.length}`
+        }
+        function makeCap(){
+            const input = document.getElementById("char")
+            let s = input.value
+            
+            console.log(s.toUpperCase())
+            document.getElementById("out").innerHTML=` ${s.toUpperCase()}`
+            document.getElementById("char").value=` ${s.toUpperCase()}`
+        }
+        function makeSmall(){
+            const input = document.getElementById("char")
+            let s = input.value
+            
+            console.log(s.toLowerCase())
+            document.getElementById("out").innerHTML=` ${s.toLowerCase()}`
+            document.getElementById("char").value=` ${s.toLowerCase()}`
+        }
+    </script>
+</body>
+</html>

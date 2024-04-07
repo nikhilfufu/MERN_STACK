@@ -9,7 +9,8 @@
 <body class="main" style="background-color:violet;">
     <button class="button" id="button" >Click to make white</button>  
     <a href="MyWebsite.html">Click here</a>
-<script>
+    <button id="prompt">click</button>
+<script >
     const buttons = document.getElementById("button");
     function colorChange(){
         if(buttons.innerText=="Click to make white"){
@@ -20,9 +21,12 @@
             document.body.style.backgroundColor="violet";
             buttons.innerText="Click to make white";
         }}
-    document.addEventListener("click",colorChange)
+        buttons.addEventListener("click",colorChange)
 
-    
+    const b = document.getElementById("prompt")
+    function alertS(){
+        alert("are u sure")
+    }
     
 </script>
 </body>

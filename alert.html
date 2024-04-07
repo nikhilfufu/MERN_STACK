@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label >Enter the name
+    <input id ="name" type="text" oninput="enter()">
+</label>
+    <br>
+    <button onclick="alerts()" style="display: none;" id="demo">Click here</button>
+    <script>
+        function enter(){
+            let input = document.getElementById("name")
+            if(input.value==null){
+                document.getElementById('demo').style.display="none"
+            }
+            else{
+                document.getElementById('demo').style.display="block"
+            }
+        }
+        function alerts(){
+          
+            alert(`Welcome to the page ${document.getElementById("name").value} `)
+        }
+    </script>
+</body>
+</html>
