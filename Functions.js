@@ -14,3 +14,5 @@ console.log(person)
 
 person.names()
 person.works()
+let s = "nikhik"
+s.length
